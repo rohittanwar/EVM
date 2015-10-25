@@ -21,18 +21,6 @@ public class LoginFragment extends Fragment {
 
         //Remove title bar
         super.onCreate(savedInstanceState);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.hide();
-        }
-
-        setContentView(R.layout.fragment_login);
-
-        inputevmid = (EditText) findViewById(R.id.evmid);
-        inputPassword = (EditText) findViewById(R.id.password);
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -50,9 +38,10 @@ public class LoginFragment extends Fragment {
                //     checkLogin(evmid, password);
                 } else {
                     // Prompt user to enter credentials
-                    Toast.makeText(getApplicationContext(),
+                  /*  Toast.makeText(getApplicationContext(),
                             "Please enter the credentials!", Toast.LENGTH_LONG)
                             .show();
+                  */
                 }
             }
 
