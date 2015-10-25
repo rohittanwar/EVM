@@ -14,19 +14,15 @@ import android.widget.Toast;
  */
 public class HomeFragment extends Fragment{
 
+    private Button btnedit;
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
         //Remove title bar
         super.onCreate(savedInstanceState);
 
-        (getActivity()).getActionBar().show();
-
-
 
 
     }
-
-
 
 }

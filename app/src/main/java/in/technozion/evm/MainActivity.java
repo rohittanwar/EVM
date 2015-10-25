@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             actionBar.hide();
         }
         setContentView(R.layout.activity_main);
-        session = new SessionManager(getApplicationContext());
+    /*    session = new SessionManager(getApplicationContext());
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to home fragment
             getFragmentManager().beginTransaction()
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
+
+        */
             //User is not logged in, take him to login fragment
             getFragmentManager().beginTransaction()
                     .replace(R.id.container,new LoginFragment())
@@ -40,4 +42,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-}
+
