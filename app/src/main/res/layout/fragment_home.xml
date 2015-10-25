@@ -8,5 +8,36 @@
 
         <!-- As the main content view, the view below consumes the entire
              space available using match_parent in both dimensions. -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:background="@color/white"
+        android:text="Edit Event/Workshop"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:text="Edit Event/Workshop Schedule"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See Participants"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_below="@+id/linearLayout"
+            />
+    </LinearLayout>
+
 
 </RelativeLayout>
