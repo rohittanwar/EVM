@@ -21,7 +21,7 @@ public class SessionManager {
 	// Shared preferences file name
 	private static final String PREF_NAME = "EVMLogin";
 	
-	private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
+	private static final Boolean logged_in = true;
 
 	public SessionManager(Context context) {
 		this._context = context;
@@ -31,7 +31,7 @@ public class SessionManager {
 
 	public void setLogin(boolean isLoggedIn) {
 
-		editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn);
+		editor.putBoolean("logged_in",true);
 
 		// commit changes
 		editor.commit();
@@ -40,6 +40,6 @@ public class SessionManager {
 	}
 	
 	public boolean isLoggedIn(){
-		return pref.getBoolean(KEY_IS_LOGGED_IN, false);
+		return pref.getBoolean("logged_in", false);
 	}
 }

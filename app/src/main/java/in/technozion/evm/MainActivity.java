@@ -1,6 +1,8 @@
 package in.technozion.evm;
 
 import android.app.ActionBar;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,30 +18,32 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor= sharedPreferences.edit();
+        editor.clear();
+        editor.commit();
         ActionBar actionBar = getActionBar();
         if (actionBar != null) {
             actionBar.hide();
         }
         setContentView(R.layout.activity_main);
-    /*    session = new SessionManager(getApplicationContext());
+        session = new SessionManager(getApplicationContext());
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to home fragment
             getFragmentManager().beginTransaction()
-                    .replace(R.id.container,new HomeFragment())
+                    .replace(R.id.container, new HomeFragment())
                     .addToBackStack(null)
                     .commit();
-        }
-        else
-        {
-
-        */
+        } else {
             //User is not logged in, take him to login fragment
             getFragmentManager().beginTransaction()
-                    .replace(R.id.container,new LoginFragment())
+                    .replace(R.id.container, new LoginFragment())
                     .addToBackStack(null)
                     .commit();
         }
 
     }
-
+}
