@@ -72,4 +72,5 @@ public class LoginFragment extends Fragment {
             //Toast a message
         }
     }
+
 }
